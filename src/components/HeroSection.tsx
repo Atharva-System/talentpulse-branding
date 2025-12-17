@@ -130,10 +130,12 @@ export const HeroSection: React.FC = () => {
                                 transform: 'translateZ(60px)'
                             }}
                         >
-                            <div className="flex -space-x-2">
-                                {[1, 2, 3].map(i => (
-                                    <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-blue-400 border-2 border-white dark:border-gray-800" />
-                                ))}
+                            <div className="flex items-center">
+                                <img
+                                    src="/candidate-faces.png"
+                                    alt="Active Candidates"
+                                    className="h-12 w-auto object-contain"
+                                />
                             </div>
                             <div className="text-base font-bold text-gray-900 dark:text-white">
                                 1.2k+ <span className="font-normal text-gray-500 text-sm">Active Candidates</span>
