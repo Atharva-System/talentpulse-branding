@@ -1,60 +1,95 @@
-# Talent Pulse Branding Website
+# Talent Pulse - Branding Page
 
-Static marketing/branding website for Talent Pulse, deployed on AWS S3 + CloudFront.
+A standalone React + Vite project for the Talent Pulse branding/marketing page.
 
-## What This Project Does
+## Features
 
-- **Marketing Website**: Public-facing branding and marketing pages for Talent Pulse
-- **Static Site**: Built with React + Vite, served as static files
-- **Auto-Deployment**: Automatically deploys to AWS S3 and invalidates CloudFront cache on push
+- ✨ Modern, responsive design
+- 🎨 Beautiful animations with Framer Motion
+- 🎯 Tailwind CSS for styling
+- 📱 Mobile-first approach
+- 🚀 Fast development with Vite
 
-## Tech Stack
+## Getting Started
 
-- React 19 + Vite
-- Tailwind CSS
-- Framer Motion (animations)
-- Deployed on AWS S3 + CloudFront
-
-## Quick Start
+### Install Dependencies
 
 ```bash
-# Install dependencies
 npm install
+```
 
-# Run development server
+### Run Development Server
+
+```bash
 npm run dev
+```
 
-# Build for production
+The page will be available at `http://localhost:5174`
+
+### Build for Production
+
+```bash
 npm run build
 ```
 
-## Deployment
+### Preview Production Build
 
-Deployment is automated via GitHub Actions:
-- Pushes trigger automatic deployment
-- Builds the React app
-- Syncs to S3 bucket: `talentpulse-branding-website`
-- Invalidates CloudFront cache
+```bash
+npm run preview
+```
 
-**Live Site**: https://www.talentpulse.ai
+## Project Structure
 
-## GitHub Actions Workflow
+```
+branding-page/
+├── public/
+│   ├── logo.png
+│   └── dashboard-preview.png
+├── src/
+│   ├── components/
+│   │   ├── HeroSection.jsx
+│   │   ├── StatsSection.jsx
+│   │   ├── FeaturesSection.jsx
+│   │   ├── IntegrationsSection.jsx
+│   │   ├── TestimonialsSection.jsx
+│   │   ├── PricingSection.jsx
+│   │   ├── CTASection.jsx
+│   │   ├── Footer.jsx
+│   │   └── ContactModal.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+└── vite.config.js
+```
 
-The project includes an automated deployment workflow (`.github/workflows/deploy.yml`) that:
+## Sections Included
 
-1. **Triggers**: On push to configured branches or manual workflow dispatch
-2. **Builds**: React application using Node.js 22
-3. **Deploys**: 
-   - Syncs built files to AWS S3 bucket
-   - Invalidates CloudFront cache for all paths
-4. **Authentication**: Uses IAM role `talent-pulse-staging-github-actions-role` via OIDC
+1. **Hero Section** - Main headline with dashboard preview and floating badges
+2. **Stats Section** - Key metrics with animated counters
+3. **Features Section** - Platform features in a grid layout
+4. **LinkedIn Integration** - Visual demo of LinkedIn connection
+5. **AI Screening** - AI resume scanning demonstration
+6. **Job Publishing** - Job posting workflow
+7. **Integrations** - 12 integration tools with logos
+8. **Testimonials** - Customer reviews
+9. **Pricing** - 3-tier pricing plans
+10. **CTA Section** - Call-to-action with gradient background
+11. **Footer** - Comprehensive footer with links
 
-### Workflow Configuration
+## Technologies
 
-- **AWS Region**: `us-east-1`
-- **S3 Bucket**: `talentpulse-branding-website`
-- **CloudFront Distribution**: `EG74CEFFGTG1`
-- **Node Version**: `22`
+- React 18
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Lucide React (icons)
+
+## Customization
+
+- Colors can be customized in `tailwind.config.js`
+- Component styles are in individual component files
+- Global styles in `src/index.css`
 
 ## License
 
