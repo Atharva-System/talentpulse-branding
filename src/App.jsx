@@ -11,10 +11,14 @@ import { IntegrationsSection } from './components/IntegrationsSection';
 import { PricingSection } from './components/PricingSection';
 import { Footer } from './components/Footer';
 import { ContactModal } from './components/ContactModal';
+import { Menu, X } from 'lucide-react';
 import './index.css';
 
 function App() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-purple-500/30">
@@ -29,6 +33,8 @@ function App() {
             />
             <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Talent Pulse</span>
           </div>
+
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors">Features</a>
             <a href="#integrations" className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors">Integrations</a>
@@ -36,11 +42,55 @@ function App() {
           </div>
           <button
             onClick={() => setIsContactModalOpen(true)}
-            className="px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-sm font-semibold transition-all shadow-lg"
+            className="hidden md:block px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-sm font-semibold transition-all shadow-lg"
           >
             Contact Us
           </button>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 text-gray-600 hover:text-purple-600 transition-colors"
+            onClick={toggleMobileMenu}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-gray-100 shadow-xl p-4 flex flex-col gap-4 animate-in slide-in-from-top-5 duration-200">
+            <a
+              href="#features"
+              className="text-base font-medium text-gray-600 hover:text-purple-600 transition-colors py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Features
+            </a>
+            <a
+              href="#integrations"
+              className="text-base font-medium text-gray-600 hover:text-purple-600 transition-colors py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Integrations
+            </a>
+            <a
+              href="#pricing"
+              className="text-base font-medium text-gray-600 hover:text-purple-600 transition-colors py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Pricing
+            </a>
+            <button
+              onClick={() => {
+                setIsContactModalOpen(true);
+                setIsMobileMenuOpen(false);
+              }}
+              className="w-full px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-base font-semibold transition-all shadow-lg"
+            >
+              Contact Us
+            </button>
+          </div>
+        )}
       </nav>
 
       <main>

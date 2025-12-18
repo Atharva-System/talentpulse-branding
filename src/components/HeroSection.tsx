@@ -27,7 +27,7 @@ export const HeroSection: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-8"
+                        className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-8"
                     >
                         Recruiting Reimagined <br />
                         with <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Artificial Intelligence</span>
@@ -37,7 +37,7 @@ export const HeroSection: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                        className="text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto"
+                        className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto"
                     >
                         Attract, Screen, and Hire the best talent with the power of AI.
                         Automate your workflow and focus on what matters - people.
@@ -65,7 +65,7 @@ export const HeroSection: React.FC = () => {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
-                    className="mt-20 relative mx-auto max-w-6xl px-4 md:px-8"
+                    className="mt-12 md:mt-20 relative mx-auto max-w-6xl px-4 md:px-8"
                 >
                     <div className="relative">
                         <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-700"
@@ -79,68 +79,71 @@ export const HeroSection: React.FC = () => {
                             />
                         </div>
 
-                        {/* Floating Badge 1: AI Match Score */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 1.2, duration: 0.5 }}
-                            className="hidden md:flex absolute left-0 top-1/4 bg-white dark:bg-gray-800 p-4 rounded-2xl border border-gray-200 dark:border-gray-700 items-center gap-3"
-                            style={{
-                                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(147, 51, 234, 0.1)',
-                                transform: 'translateZ(50px)'
-                            }}
-                        >
-                            <div className="w-12 h-12 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
-                                <span className="font-bold text-lg">98%</span>
-                            </div>
-                            <div>
-                                <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">AI Match Score</div>
-                                <div className="text-base font-bold text-gray-900 dark:text-white">Top Candidate</div>
-                            </div>
-                        </motion.div>
+                        {/* Floating Badges Container */}
+                        <div className="grid grid-cols-1 gap-4 mt-6 md:block md:mt-0">
+                            {/* Floating Badge 1: AI Match Score */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 1.2, duration: 0.5 }}
+                                className="flex md:absolute left-0 top-1/4 bg-white dark:bg-gray-800 p-4 rounded-2xl border border-gray-200 dark:border-gray-700 items-center gap-3 shadow-xl md:shadow-none"
+                                style={{
+                                    boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(147, 51, 234, 0.1)',
+                                    transform: 'translateZ(50px)'
+                                }}
+                            >
+                                <div className="w-12 h-12 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+                                    <span className="font-bold text-lg">98%</span>
+                                </div>
+                                <div>
+                                    <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">AI Match Score</div>
+                                    <div className="text-base font-bold text-gray-900 dark:text-white">Top Candidate</div>
+                                </div>
+                            </motion.div>
 
-                        {/* Floating Badge 2: Time Saved */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 1.4, duration: 0.5 }}
-                            className="hidden md:flex absolute right-0 bottom-1/4 bg-white dark:bg-gray-800 p-4 rounded-2xl border border-gray-200 dark:border-gray-700 items-center gap-3"
-                            style={{
-                                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(59, 130, 246, 0.1)',
-                                transform: 'translateZ(50px)'
-                            }}
-                        >
-                            <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
-                                <span className="font-bold text-lg">12h</span>
-                            </div>
-                            <div>
-                                <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">Time Saved</div>
-                                <div className="text-base font-bold text-gray-900 dark:text-white">Per Hire</div>
-                            </div>
-                        </motion.div>
+                            {/* Floating Badge 2: Time Saved */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 1.4, duration: 0.5 }}
+                                className="flex md:absolute right-0 bottom-1/4 bg-white dark:bg-gray-800 p-4 rounded-2xl border border-gray-200 dark:border-gray-700 items-center gap-3 shadow-xl md:shadow-none"
+                                style={{
+                                    boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(59, 130, 246, 0.1)',
+                                    transform: 'translateZ(50px)'
+                                }}
+                            >
+                                <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                                    <span className="font-bold text-lg">12h</span>
+                                </div>
+                                <div>
+                                    <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">Time Saved</div>
+                                    <div className="text-base font-bold text-gray-900 dark:text-white">Per Hire</div>
+                                </div>
+                            </motion.div>
 
-                        {/* Floating Badge 3: Active Candidates */}
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 1.6, duration: 0.5 }}
-                            className="hidden md:flex absolute left-1/2 -translate-x-1/2 top-0 bg-white dark:bg-gray-800 py-3 px-5 rounded-full border border-gray-200 dark:border-gray-700 items-center gap-3"
-                            style={{
-                                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(147, 51, 234, 0.1)',
-                                transform: 'translateZ(60px)'
-                            }}
-                        >
-                            <div className="flex items-center">
-                                <img
-                                    src="/candidate-faces.png"
-                                    alt="Active Candidates"
-                                    className="h-12 w-auto object-contain"
-                                />
-                            </div>
-                            <div className="text-base font-bold text-gray-900 dark:text-white">
-                                1.2k+ <span className="font-normal text-gray-500 text-sm">Active Candidates</span>
-                            </div>
-                        </motion.div>
+                            {/* Floating Badge 3: Active Candidates */}
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 1.6, duration: 0.5 }}
+                                className="flex md:absolute left-1/2 md:-translate-x-1/2 top-0 bg-white dark:bg-gray-800 py-3 px-5 rounded-full border border-gray-200 dark:border-gray-700 items-center gap-3 shadow-xl md:shadow-none"
+                                style={{
+                                    boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(147, 51, 234, 0.1)',
+                                    transform: 'translateZ(60px)'
+                                }}
+                            >
+                                <div className="flex items-center">
+                                    <img
+                                        src="/candidate-faces.png"
+                                        alt="Active Candidates"
+                                        className="h-12 w-auto object-contain"
+                                    />
+                                </div>
+                                <div className="text-base font-bold text-gray-900 dark:text-white">
+                                    1.2k+ <span className="font-normal text-gray-500 text-sm">Active Candidates</span>
+                                </div>
+                            </motion.div>
+                        </div>
                     </div>
                 </motion.div>
             </div>

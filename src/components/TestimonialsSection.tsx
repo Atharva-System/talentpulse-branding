@@ -7,7 +7,7 @@ const testimonials = [
         name: 'Sarah Johnson',
         role: 'HR Director',
         company: 'TechCorp Inc.',
-        image: '👩‍💼',
+        image: '/1.jpg',
         quote: 'Talent Pulse transformed our hiring process. We reduced time-to-hire by 60% and found better candidates faster.',
         rating: 5,
     },
@@ -15,7 +15,7 @@ const testimonials = [
         name: 'Michael Chen',
         role: 'Recruitment Lead',
         company: 'StartupXYZ',
-        image: '👨‍💻',
+        image: '/2.jpg',
         quote: 'The AI screening is incredibly accurate. It saved us hundreds of hours reviewing resumes manually.',
         rating: 5,
     },
@@ -23,7 +23,7 @@ const testimonials = [
         name: 'Emily Rodriguez',
         role: 'Talent Acquisition Manager',
         company: 'Global Solutions',
-        image: '👩‍🎓',
+        image: '/3.jpg',
         quote: 'Best recruitment platform we\'ve used. The LinkedIn integration alone is worth it. Highly recommend!',
         rating: 5,
     },
@@ -54,9 +54,13 @@ export const TestimonialsSection: React.FC = () => {
                         >
                             <Quote className="absolute top-6 right-6 w-8 h-8 text-purple-200 dark:text-purple-900/30" />
 
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-400 to-blue-400 flex items-center justify-center text-2xl shadow-lg">
-                                    {testimonial.image}
+                            <div className="flex items-center gap-5 mb-6">
+                                <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg flex-shrink-0 border-2 border-white dark:border-gray-700">
+                                    <img
+                                        src={testimonial.image}
+                                        alt={testimonial.name}
+                                        className="w-full h-full object-cover object-top"
+                                    />
                                 </div>
                                 <div>
                                     <div className="font-bold text-gray-900 dark:text-white">{testimonial.name}</div>
