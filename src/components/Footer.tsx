@@ -195,7 +195,7 @@ export const Footer: React.FC = () => {
                         </div>
                         <div className="hidden md:block w-px h-4 bg-gray-300"></div>
                         <div className="flex items-center gap-2 text-sm text-gray-500">
-                            <span>Develop by</span>
+                            <span>Developed by</span>
                             <img
                                 src="/logo.png"
                                 alt="Atharva System"
