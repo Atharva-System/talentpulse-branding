@@ -95,16 +95,30 @@ export const ProcessSection: React.FC = () => {
 
                 <div className="relative">
                     {/* Desktop Connecting Line */}
-                    <div className="hidden xl:block absolute top-12 left-0 w-full h-0.5 bg-gray-100 dark:bg-gray-800 -z-10" />
+                    <div className="hidden xl:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200 dark:from-purple-900/30 dark:via-blue-900/30 dark:to-purple-900/30" />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-6 relative z-10">
+                    <motion.div
+                        variants={{
+                            hidden: { opacity: 0 },
+                            show: {
+                                opacity: 1,
+                                transition: {
+                                    staggerChildren: 0.15
+                                }
+                            }
+                        }}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true, margin: "-100px" }}
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-6 relative z-10"
+                    >
                         {steps.map((step, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                                }}
                                 className="group relative"
                             >
                                 <div className={`h-full p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300 ${step.border} hover:border-opacity-50`}>
@@ -135,7 +149,7 @@ export const ProcessSection: React.FC = () => {
                                 )}
                             </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
