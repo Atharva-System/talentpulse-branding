@@ -61,12 +61,22 @@ export const Layout = () => {
 
                     </div>
 
-                    <button
-                        onClick={() => setIsContactModalOpen(true)}
-                        className="hidden md:block px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-sm font-semibold transition-all shadow-lg"
-                    >
-                        Contact Us
-                    </button>
+                    <div className="hidden md:flex items-center gap-4">
+                        <a
+                            href="https://stage.talentpulse.ai/login"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-6 py-2 rounded-full border border-purple-600 text-purple-600 dark:text-purple-400 dark:border-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 text-sm font-semibold transition-all"
+                        >
+                            Login
+                        </a>
+                        <button
+                            onClick={() => setIsContactModalOpen(true)}
+                            className="px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-sm font-semibold transition-all shadow-lg"
+                        >
+                            Contact Us
+                        </button>
+                    </div>
 
                     {/* Mobile Menu Button */}
                     <div className="flex items-center gap-4 md:hidden">
@@ -101,6 +111,14 @@ export const Layout = () => {
                         >
                             Pricing
                         </Link>
+                        <a
+                            href="https://stage.talentpulse.ai/login"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full px-6 py-3 rounded-full border border-purple-600 text-purple-600 dark:text-purple-400 dark:border-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 text-base font-semibold transition-all text-center"
+                        >
+                            Login
+                        </a>
                         <button
                             onClick={() => {
                                 setIsContactModalOpen(true);

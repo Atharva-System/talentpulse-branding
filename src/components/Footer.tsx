@@ -196,11 +196,18 @@ export const Footer: React.FC = () => {
                         <div className="hidden md:block w-px h-4 bg-gray-300"></div>
                         <div className="flex items-center gap-2 text-sm text-gray-500">
                             <span>Developed by</span>
-                            <img
-                                src="/logo.png"
-                                alt="Atharva System"
-                                className="h-10 object-contain hover:opacity-80 transition-opacity"
-                            />
+                            <a
+                                href="https://www.atharvasystem.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block"
+                            >
+                                <img
+                                    src="/logo.png"
+                                    alt="Atharva System"
+                                    className="h-10 object-contain hover:opacity-80 transition-opacity"
+                                />
+                            </a>
                         </div>
                     </div>
 
