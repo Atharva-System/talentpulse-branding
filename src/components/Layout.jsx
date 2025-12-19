@@ -45,11 +45,11 @@ export const Layout = () => {
                     <div className="flex items-center gap-3">
                         <Link to="/" className="flex items-center gap-3">
                             <img
-                                src="/logo1.png"
+                                src="/logo2.png"
                                 alt="Talent Pulse Logo"
-                                className="h-12 w-auto object-contain"
+                                className="h-45 w-auto object-contain"
                             />
-                            <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Talent Pulse</span>
+                            {/* <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Talent Pulse</span> */}
                         </Link>
                     </div>
 
