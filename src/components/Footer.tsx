@@ -194,13 +194,13 @@ export const Footer: React.FC = () => {
                             © {new Date().getFullYear()} Talent Pulse. All rights reserved.
                         </div>
                         <div className="hidden md:block w-px h-4 bg-gray-300"></div>
-                        <div className="flex items-center gap-2 text-sm text-gray-500">
-                            <span>Developed by</span>
+                        <div className="flex items-center gap-2 text-sm text-gray-500 whitespace-nowrap flex-nowrap">
+                            <span className="shrink-0">Developed by</span>
                             <a
                                 href="https://www.atharvasystem.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block"
+                                className="inline-block shrink-0"
                             >
                                 <img
                                     src="/logo.png"
