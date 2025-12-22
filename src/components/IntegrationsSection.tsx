@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import acSpaceLogo from '../assets/ac-logo-fe52db2548daad24aa44.svg';
 
 const integrations = [
     { name: 'LinkedIn', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png', color: 'text-[#0077b5]', bg: 'bg-blue-50 dark:bg-blue-900/20' },
@@ -12,7 +13,7 @@ const integrations = [
     { name: 'Workday', logo: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHJ4PSI4IiBmaWxsPSIjRjI2NTIyIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSJib2xkIj5XPC90ZXh0Pjwvc3ZnPg==', color: 'text-[#F26522]', bg: 'bg-orange-50 dark:bg-orange-900/20' },
     { name: 'BambooHR', logo: 'https://cdn.simpleicons.org/bamboo/73C41D', color: 'text-[#73C41D]', bg: 'bg-lime-50 dark:bg-lime-900/20' },
     { name: 'Indeed', logo: 'https://cdn.simpleicons.org/indeed/2164F3', color: 'text-[#2164F3]', bg: 'bg-blue-50 dark:bg-blue-900/20' },
-    { name: 'Naukri', logo: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHJ4PSI4IiBmaWxsPSIjNzY2REY0Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LWNpemU9IjE2IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSJib2xkIj5OPC90ZXh0Pjwvc3ZnPg==', color: 'text-[#766DF4]', bg: 'bg-violet-50 dark:bg-violet-900/20' },
+    { name: 'AC Space', logo: acSpaceLogo, color: 'text-[#e55f64]', bg: 'bg-red-50 dark:bg-red-900/20' },
     { name: 'Google Meet', logo: 'https://cdn.simpleicons.org/googlemeet/00897B', color: 'text-[#00897B]', bg: 'bg-teal-50 dark:bg-teal-900/20' },
 ];
 
